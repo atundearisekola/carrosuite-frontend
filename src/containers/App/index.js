@@ -18,7 +18,7 @@ import AppLocale from "lngProvider";
 import MainApp from "./MainApp";
 import SignIn from "../SignIn";
 import SignUp from "../SignUp";
-import { setInitUrl } from "appRedux/actions/Auth";
+//import { setInitUrl } from "appRedux/actions/Auth";
 import {
   onLayoutTypeChange,
   onNavStyleChange,
@@ -80,9 +80,9 @@ const App = (props) => {
   });
 
   useEffect(() => {
-    if (initURL === "") {
-      props.setInitUrl(location.pathname);
-    }
+    // if (initURL === "") {
+    // props.setInitUrl(location.pathname);
+    //}
     const params = new URLSearchParams(location.search);
 
     if (params.has("theme")) {
@@ -167,7 +167,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     ...bindActionCreators(
       {
-        setInitUrl,
+        // setInitUrl,
       },
       dispatch
     ),
