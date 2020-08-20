@@ -1,0 +1,107 @@
+.btn {
+  font-size: 0.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 3px;
+
+  display: inline-block;
+  background: @light-color;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  // margin-right: 0.5rem;
+
+  &__container {
+    margin-bottom: 3rem;
+  }
+  outline: none;
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+
+  &:disabled {
+    background: @gray-color;
+    &:hover {
+      background: @gray-color;
+    }
+  }
+  &.btn-primary {
+    background: @indigo-color;
+    color: @light-color;
+    width: 100%;
+
+    &:hover {
+      background: lighten(@primary-color, 5);
+      color: @light-color;
+    }
+    &:visited {
+      background: lighten(@primary-color, 3);
+    }
+
+    &:focus {
+      outline: none;
+      animation: pulsate 1s infinite;
+    }
+  }
+
+  &.btn-light {
+    background: @light-color;
+    color: @dark-color;
+    &:hover {
+      background: lighten(@light-color, 5);
+      color: @dark-color;
+    }
+    &:visited {
+      background: lighten(@light-color, 3);
+    }
+  }
+
+  &.btn-secondary {
+    background: @secondary-color;
+    color: @light-color;
+    &:hover {
+      background: lighten(@secondary-color, 5);
+      color: @light-color;
+    }
+    &:visited {
+      background: lighten(@secondary-color, 3);
+    }
+  }
+
+  &.btn-dark {
+    background: @dark-color;
+    color: #fff;
+    &:hover {
+      background: lighten(@dark-color, 5);
+      color: @light-color;
+    }
+    &:visited {
+      background: lighten(@dark-color, 3);
+    }
+  }
+
+  &.btn-danger {
+    background: @danger-color;
+    color: #fff;
+    &:hover {
+      background: lighten(@danger-color, 5);
+      color: #fff;
+    }
+    &:visited {
+      background: lighten(@danger-color, 3);
+    }
+  }
+
+  &.btn-success {
+    background: @teal;
+    color: #fff;
+    &:hover {
+      background: lighten(@success-color, 5);
+      color: #fff;
+    }
+    &:visited {
+      background: lighten(@success-color, 3);
+    }
+  }
+}
