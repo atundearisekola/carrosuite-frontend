@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { Avatar, Popover } from "antd";
-import { logout } from "appRedux/actions/Auth";
+import { logout } from "appRedux/actions/auth";
 
 const UserInfo = () => {
   const dispatch = useDispatch();
